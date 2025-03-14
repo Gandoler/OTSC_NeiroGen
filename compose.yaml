@@ -4,3 +4,9 @@
     build:
       context: .
       dockerfile: NeiroGenApi/Dockerfile
+
+  test:
+    image: test
+    build:
+      context: .
+      dockerfile: TEST/Dockerfile
