@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Services", "Domain.Services\Domain.Services.csproj", "{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{B919FCD4-BB3B-4BC3-84E3-CF37420347C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1E6DEDFF-E5FC-407A-A5B9-F0459D86C2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Business", "Infrastructure.Business\Infrastructure.Business.csproj", "{77550D45-2019-4D8A-B529-AF58B602FB0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APPLevel", "APPLevel", "{E101BADE-2089-4712-81AF-245D5768374E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeiroGenApi", "NeiroGenApi\NeiroGenApi.csproj", "{7E9BCBD3-2A33-4DDC-867F-19214418C0A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9CCFC149-E754-4C97-B748-01B417BA9665}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77550D45-2019-4D8A-B529-AF58B602FB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77550D45-2019-4D8A-B529-AF58B602FB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77550D45-2019-4D8A-B529-AF58B602FB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77550D45-2019-4D8A-B529-AF58B602FB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9BCBD3-2A33-4DDC-867F-19214418C0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9BCBD3-2A33-4DDC-867F-19214418C0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9BCBD3-2A33-4DDC-867F-19214418C0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9BCBD3-2A33-4DDC-867F-19214418C0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E44CA25E-A4A5-446F-8C84-7D0225CA3DFA} = {B919FCD4-BB3B-4BC3-84E3-CF37420347C5}
+		{77550D45-2019-4D8A-B529-AF58B602FB0B} = {1E6DEDFF-E5FC-407A-A5B9-F0459D86C2C2}
+		{7E9BCBD3-2A33-4DDC-867F-19214418C0A8} = {E101BADE-2089-4712-81AF-245D5768374E}
+	EndGlobalSection
+EndGlobal
