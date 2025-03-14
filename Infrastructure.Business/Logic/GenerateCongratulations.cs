@@ -6,21 +6,23 @@ using Domain.Services.IServices;
 
 namespace Domain.Services;
 
-public class GenerateCongratulations:IGenerateCongratilationService
+public class GenerateCongratulations:IGenerateCongratilation
 {
     private readonly string apiUrl;
     private readonly HttpClient _httpClient;
 
-    public GenerateCongratulations(string apiKey, string apiUrl, HttpClient httpClient)
+    public GenerateCongratulations(string? apiKey, string apiUrl, HttpClient httpClient)
     {
         this.apiUrl = apiUrl;
         this._httpClient = httpClient;
         this._httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
     }
 
-    public async Task<string?> GenerateAsync(string name, string interests, string wishes)
+    public async Task<string?> GenerateAsync(string? name, string? interests, string? wishes)
     {
-        string userMessage = $"Напиши персональное поздравление для {name}. У него(неё) интересы: {interests}. Он(она) хочет: {wishes}. " +
+        string userMessage = $"Напиши персональное поздравление для {name}. У него(неё) " +
+                             $"интересы: {(string.IsNullOrEmpty(interests) ? "машины" : interests)}. Он(она) " +
+                             $"хочет: {(string.IsNullOrEmpty(wishes) ? "счастья и здоровья" : wishes)}. " +
                              "Поздравление должно быть теплым, душевным и личным, с учетом интересов и пожеланий.";
 
         var requestBody = new

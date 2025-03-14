@@ -1,0 +1,22 @@
+2025-03-14 19:45:30.108 +03:00 [INF] Now listening on: http://localhost:5069
+2025-03-14 19:45:30.153 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 19:45:30.153 +03:00 [INF] Hosting environment: Development
+2025-03-14 19:45:30.153 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-14 19:45:32.135 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5069/ - null null
+2025-03-14 19:45:32.170 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method1(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 19:45:32.190 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5069/ - 500 null text/html; charset=utf-8 55.8545ms
+2025-03-14 19:45:32.278 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5069/favicon.ico - null null
+2025-03-14 19:45:32.278 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method1(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 19:45:32.281 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5069/favicon.ico - 500 null text/plain; charset=utf-8 3.2043ms
+2025-03-14 19:50:48.920 +03:00 [INF] Application is shutting down...
+2025-03-14 20:13:03.556 +03:00 [INF] Now listening on: http://localhost:5069
+2025-03-14 20:13:03.597 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 20:13:03.597 +03:00 [INF] Hosting environment: Development
+2025-03-14 20:13:03.597 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-14 20:13:26.317 +03:00 [INF] Application is shutting down...

@@ -1,8 +1,16 @@
 
+using Domain.Services;
+using Domain.Services.IServices;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddScoped<IGenerateCongratilation, GenerateCongratulations>();
+builder.Services.AddScoped<IProxyApiClient, ProxyApiClient>();
+
+builder.Services.AddScoped<IAddNewCongratulationsService, IAddNewCongratulationsService>();
+builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
 Log.Logger = new LoggerConfiguration()
