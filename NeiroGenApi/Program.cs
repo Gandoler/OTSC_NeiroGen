@@ -1,4 +1,3 @@
-using Infrastructure.Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
