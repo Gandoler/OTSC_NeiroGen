@@ -2,18 +2,17 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using Domain.Services.IServices;
 
 namespace Domain.Services;
 
-public class GenerateCongratulations
+public class GenerateCongratulations:IGenerateCongratilationService
 {
-    private readonly string apiKey;
     private readonly string apiUrl;
     private readonly HttpClient _httpClient;
 
     public GenerateCongratulations(string apiKey, string apiUrl, HttpClient httpClient)
     {
-        this.apiKey = apiKey;
         this.apiUrl = apiUrl;
         this._httpClient = httpClient;
         this._httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
