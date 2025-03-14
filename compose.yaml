@@ -1,0 +1,6 @@
+﻿services:
+  neirogenapi:
+    image: neirogenapi
+    build:
+      context: .
+      dockerfile: NeiroGenApi/Dockerfile
