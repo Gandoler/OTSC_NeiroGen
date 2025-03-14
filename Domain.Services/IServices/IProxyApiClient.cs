@@ -6,6 +6,6 @@ namespace Domain.Services.IServices;
 public interface IProxyApiClient
 {
     Task<bool> CongratilationToProxyApiAsync(PozdrStringDTO pozdrik);
-    Task<AddIntAndPozhDto> GetAddIntAndCongratilationAsync(AppIdDto appId);
-    Task <string> GetName(PozdrikIdDto pozdrikId);
+    Task<AddIntAndPozhDto?> GetAddIntAndCongratilationAsync(PozdrikIdDto pozdrikId);
+    Task <string?> GetName(PozdrikIdDto pozdrikId);
 }
