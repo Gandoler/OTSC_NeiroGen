@@ -15,13 +15,13 @@ public class ProxyApiClient: IProxyApiClient
     
     public async Task<bool> CongratilationToProxyApiAsync(PozdrStringDTO pozdrik)
     {
-        var response = await _httpClient.PostAsJsonAsync("api/neirogen/pozdrik/add", pozdrik);
+        var response = await _httpClient.PostAsJsonAsync("api/neirogen/pozdrik/add", pozdrik._pozdrikId);
         return response.IsSuccessStatusCode;
     }
 
     public async Task<AddIntAndPozhDto?> GetAddIntAndCongratilationAsync(PozdrikIdDto pozdrikId)
     {
-        var response = await _httpClient.GetAsync($"api/neirogen/pozdrik/{pozdrikId}");
+        var response = await _httpClient.GetAsync($"api/neirogen/pozdrik/{pozdrikId._pozdrikId}");
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception($"Error fetching Name: {response.ReasonPhrase}");
@@ -32,7 +32,7 @@ public class ProxyApiClient: IProxyApiClient
 
     public async Task<string?> GetName(PozdrikIdDto pozdrikId)
     {
-        var response = await _httpClient.GetAsync($"api/neirogen/pozdrik/name/{pozdrikId}");
+        var response = await _httpClient.GetAsync($"api/neirogen/pozdrik/name/{pozdrikId._pozdrikId}");
 
         if (!response.IsSuccessStatusCode)
         {
@@ -41,7 +41,7 @@ public class ProxyApiClient: IProxyApiClient
         var result = await response.Content.ReadAsStringAsync();
         if (string.IsNullOrWhiteSpace(result))
         {
-            response = await _httpClient.GetAsync($"api/neirogen/pozdrik/username/{pozdrikId}");
+            response = await _httpClient.GetAsync($"api/neirogen/pozdrik/username/{pozdrikId._pozdrikId}");
             if (!response.IsSuccessStatusCode)
             {
                 throw new Exception($"Error fetching UserName: {response.ReasonPhrase}");

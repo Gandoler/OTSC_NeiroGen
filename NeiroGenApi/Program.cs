@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using Domain.Services;
 using Domain.Services.IServices;
 using Infrastructure.Business.SERVICES;
@@ -7,18 +8,39 @@ var builder = WebApplication.CreateBuilder(args);
 
 var configuration = builder.Configuration;
 var apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
+var dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
 var apiUrl = configuration["ApiSettings:ApiUrl"] ?? throw new Exception("ApiUrl is missing");
 
-builder.Services.AddHttpClient();
-
-// Регистрация сервисов напрямую через DI
-builder.Services.AddScoped<IGenerateCongratilation, GenerateCongratulations>(provider =>
+// HttpClient для Proxy API (работает с `DbProxy`)
+builder.Services.AddHttpClient("ProxyApiClient", client =>
 {
-    var httpClient = provider.GetRequiredService<HttpClient>();
+    client.BaseAddress = new Uri(dbProxy);
+});
+
+// HttpClient для генерации поздравлений (работает с `apiUrl` и `apiKey`)
+builder.Services.AddHttpClient("GenerateCongratulations", client =>
+{
+    client.BaseAddress = new Uri(apiUrl);
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+});
+
+// Регистрация `GenerateCongratulations` с правильным HttpClient
+builder.Services.AddScoped<IGenerateCongratilation>(provider =>
+{
+    var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+    var httpClient = httpClientFactory.CreateClient("GenerateCongratulations");
     return new GenerateCongratulations(apiKey, apiUrl, httpClient);
 });
 
-builder.Services.AddScoped<IProxyApiClient, ProxyApiClient>();
+// Регистрация `ProxyApiClient` с `DbProxy`
+builder.Services.AddScoped<IProxyApiClient>(provider =>
+{
+    var httpClientFactory = provider.GetRequiredService<IHttpClientFactory>();
+    var httpClient = httpClientFactory.CreateClient("ProxyApiClient");
+    return new ProxyApiClient(httpClient);
+});
+
+// Регистрация основного сервиса
 builder.Services.AddScoped<IAddNewCongratulationsService, AddNewCongratulationsService>();
 
 builder.Services.AddControllers();
@@ -26,6 +48,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Логирование через Serilog
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
