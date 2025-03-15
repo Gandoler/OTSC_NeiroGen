@@ -30,6 +30,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 builder.Host.UseSerilog();
+builder.Services.AddSingleton<Serilog.ILogger>(Log.Logger); 
 
 var app = builder.Build();
 app.UseSwagger();

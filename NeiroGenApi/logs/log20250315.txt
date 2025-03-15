@@ -1,0 +1,23 @@
+2025-03-15 12:56:43.332 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 12:56:43.380 +03:00 [INF] Now listening on: http://localhost:5010
+2025-03-15 12:56:43.380 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 12:56:43.380 +03:00 [INF] Hosting environment: Development
+2025-03-15 12:56:43.380 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 12:56:56.418 +03:00 [INF] Application is shutting down...
+2025-03-15 12:57:07.461 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 12:57:07.506 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 12:57:07.506 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 12:57:07.507 +03:00 [INF] Hosting environment: Development
+2025-03-15 12:57:07.507 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 12:57:09.281 +03:00 [INF] Application is shutting down...
+2025-03-15 12:57:49.807 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 12:57:49.853 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 12:57:49.853 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 12:57:49.853 +03:00 [INF] Hosting environment: Development
+2025-03-15 12:57:49.853 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 12:58:01.333 +03:00 [INF] Application is shutting down...
+2025-03-15 13:03:07.955 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 13:03:08.000 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 13:03:08.001 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 13:03:08.001 +03:00 [INF] Hosting environment: Development
+2025-03-15 13:03:08.001 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
