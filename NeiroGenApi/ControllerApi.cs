@@ -1,3 +1,4 @@
+using Domain.Services.IServices;
 using Entities.Templates;
 using Infrastructure.Business.SERVICES;
 using Microsoft.AspNetCore.Mvc;
@@ -9,10 +10,10 @@ namespace NeiroGenApi;
 
 public class ControllerApi: ControllerBase
 {
-    private readonly AddNewCongratulationsService _addNewCongratulationsService;
+    private readonly IAddNewCongratulationsService _addNewCongratulationsService;
 
 
-    public ControllerApi(AddNewCongratulationsService addNewCongratulationsService)
+    public ControllerApi(IAddNewCongratulationsService addNewCongratulationsService)
     {
         _addNewCongratulationsService = addNewCongratulationsService;
     }
