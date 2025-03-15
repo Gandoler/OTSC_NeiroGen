@@ -438,3 +438,211 @@ System.Exception: Error fetching Name: Not Found
 2025-03-15 14:35:43.466 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
 2025-03-15 14:35:43.468 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 400 in 17501.8538 ms
 2025-03-15 14:35:43.471 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 400 null application/json; charset=utf-8 17511.9897ms
+2025-03-15 14:40:52.666 +03:00 [INF] Application is shutting down...
+2025-03-15 14:42:29.712 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 14:42:29.762 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 14:42:29.762 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 14:42:29.762 +03:00 [INF] Hosting environment: Development
+2025-03-15 14:42:29.762 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 14:42:48.318 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:42:48.353 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-15 14:42:48.355 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:42:48.368 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:42:48.383 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:42:48.386 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:42:48.391 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:42:48.391 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:42:48.413 +03:00 [INF] Received HTTP response headers after 19.6578ms - 200
+2025-03-15 14:42:48.418 +03:00 [INF] End processing HTTP request after 28.8189ms - 200
+2025-03-15 14:42:48.431 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:42:48.431 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:42:48.436 +03:00 [INF] Received HTTP response headers after 4.5571ms - 200
+2025-03-15 14:42:48.436 +03:00 [INF] End processing HTTP request after 5.6365ms - 200
+2025-03-15 14:42:48.437 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:42:48.445 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:42:48.445 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:42:49.187 +03:00 [INF] Received HTTP response headers after 741.7116ms - 200
+2025-03-15 14:42:49.187 +03:00 [INF] End processing HTTP request after 742.1618ms - 200
+2025-03-15 14:43:00.360 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:43:00.362 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:43:00.373 +03:00 [INF] Received HTTP response headers after 11.1806ms - 400
+2025-03-15 14:43:00.373 +03:00 [INF] End processing HTTP request after 13.1244ms - 400
+2025-03-15 14:43:00.374 +03:00 [INF] Поздравление успешно отправлено в Proxy API: false
+2025-03-15 14:43:00.380 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 11992.2461ms.
+2025-03-15 14:43:00.388 +03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 14:43:00.395 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 12024.2655ms
+2025-03-15 14:43:00.396 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:43:00.399 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 400 in 12045.6175 ms
+2025-03-15 14:43:00.405 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 400 null application/json; charset=utf-8 12087.8598ms
+2025-03-15 14:44:02.186 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:44:02.195 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:44:02.195 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:44:02.196 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:44:02.196 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:44:02.197 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:44:02.197 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:44:02.209 +03:00 [INF] Received HTTP response headers after 12.5352ms - 200
+2025-03-15 14:44:02.209 +03:00 [INF] End processing HTTP request after 12.8582ms - 200
+2025-03-15 14:44:02.210 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:44:02.210 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:44:02.213 +03:00 [INF] Received HTTP response headers after 3.0457ms - 200
+2025-03-15 14:44:02.213 +03:00 [INF] End processing HTTP request after 3.3203ms - 200
+2025-03-15 14:44:02.213 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:44:02.213 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:44:02.214 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:44:02.609 +03:00 [INF] Received HTTP response headers after 395.7935ms - 200
+2025-03-15 14:44:02.610 +03:00 [INF] End processing HTTP request after 396.2316ms - 200
+2025-03-15 14:44:19.566 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:44:19.567 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:44:19.572 +03:00 [INF] Received HTTP response headers after 4.9969ms - 400
+2025-03-15 14:44:19.572 +03:00 [INF] End processing HTTP request after 6.167ms - 400
+2025-03-15 14:44:19.572 +03:00 [INF] Поздравление успешно отправлено в Proxy API: false
+2025-03-15 14:44:19.573 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 17376.2543ms.
+2025-03-15 14:44:19.573 +03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 14:44:19.574 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 17379.0483ms
+2025-03-15 14:44:19.574 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:44:19.574 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 400 in 17380.2450 ms
+2025-03-15 14:44:19.575 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 400 null application/json; charset=utf-8 17388.9742ms
+2025-03-15 14:45:33.303 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:45:33.306 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:45:33.306 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:45:33.307 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:45:33.307 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:45:33.307 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:45:33.307 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:45:33.312 +03:00 [INF] Received HTTP response headers after 4.0153ms - 200
+2025-03-15 14:45:33.312 +03:00 [INF] End processing HTTP request after 4.2647ms - 200
+2025-03-15 14:45:33.312 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:45:33.312 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:45:33.315 +03:00 [INF] Received HTTP response headers after 2.5758ms - 200
+2025-03-15 14:45:33.315 +03:00 [INF] End processing HTTP request after 2.7851ms - 200
+2025-03-15 14:45:33.315 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:45:33.315 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:45:33.315 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:45:33.845 +03:00 [INF] Received HTTP response headers after 529.6544ms - 200
+2025-03-15 14:45:33.845 +03:00 [INF] End processing HTTP request after 530.1234ms - 200
+2025-03-15 14:45:48.306 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:45:48.308 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:45:48.311 +03:00 [INF] Received HTTP response headers after 2.811ms - 400
+2025-03-15 14:45:48.311 +03:00 [INF] End processing HTTP request after 4.4765ms - 400
+2025-03-15 14:45:48.311 +03:00 [INF] Поздравление успешно отправлено в Proxy API: false
+2025-03-15 14:45:48.311 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 15003.8436ms.
+2025-03-15 14:45:48.311 +03:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 14:45:48.311 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 15005.644ms
+2025-03-15 14:45:48.311 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:45:48.312 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 400 in 15006.0380 ms
+2025-03-15 14:45:48.312 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 400 null application/json; charset=utf-8 15008.9595ms
+2025-03-15 14:46:48.218 +03:00 [INF] Application is shutting down...
+2025-03-15 14:46:53.234 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 14:46:53.301 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 14:46:53.301 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 14:46:53.301 +03:00 [INF] Hosting environment: Development
+2025-03-15 14:46:53.302 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 14:46:56.662 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:46:56.706 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-15 14:46:56.708 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:46:56.720 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:46:56.751 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:47:19.029 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:47:27.418 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:47:27.419 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:47:27.544 +03:00 [INF] Received HTTP response headers after 122.9824ms - 200
+2025-03-15 14:47:27.550 +03:00 [INF] End processing HTTP request after 133.6715ms - 200
+2025-03-15 14:50:49.138 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:50:49.139 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:50:49.238 +03:00 [INF] Received HTTP response headers after 98.2167ms - 200
+2025-03-15 14:50:49.238 +03:00 [INF] End processing HTTP request after 100.9362ms - 200
+2025-03-15 14:52:55.476 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:53:15.632 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:53:15.632 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:53:16.380 +03:00 [INF] Received HTTP response headers after 747.534ms - 200
+2025-03-15 14:53:16.380 +03:00 [INF] End processing HTTP request after 748.0408ms - 200
+2025-03-15 14:54:05.665 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:54:05.665 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:54:05.699 +03:00 [INF] Received HTTP response headers after 33.5258ms - 400
+2025-03-15 14:54:05.699 +03:00 [INF] End processing HTTP request after 34.203ms - 400
+2025-03-15 14:54:31.004 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 14:54:31.052 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 14:54:31.052 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 14:54:31.052 +03:00 [INF] Hosting environment: Development
+2025-03-15 14:54:31.052 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 14:54:33.688 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:54:33.721 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-15 14:54:33.723 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:54:33.733 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:54:33.747 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:54:33.750 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:54:33.754 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:54:33.755 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:54:33.797 +03:00 [INF] Received HTTP response headers after 40.3855ms - 200
+2025-03-15 14:54:33.803 +03:00 [INF] End processing HTTP request after 49.5972ms - 200
+2025-03-15 14:54:33.815 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:54:33.815 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:54:33.818 +03:00 [INF] Received HTTP response headers after 3.6905ms - 200
+2025-03-15 14:54:33.819 +03:00 [INF] End processing HTTP request after 4.5922ms - 200
+2025-03-15 14:54:33.819 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:54:33.826 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:54:33.826 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:54:34.408 +03:00 [INF] Received HTTP response headers after 581.597ms - 200
+2025-03-15 14:54:34.408 +03:00 [INF] End processing HTTP request after 582.0986ms - 200
+2025-03-15 14:54:47.060 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:54:47.060 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:54:47.178 +03:00 [INF] Received HTTP response headers after 118.0098ms - 200
+2025-03-15 14:54:47.179 +03:00 [INF] End processing HTTP request after 118.9654ms - 200
+2025-03-15 14:54:47.179 +03:00 [INF] Поздравление успешно отправлено в Proxy API: true
+2025-03-15 14:54:47.183 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13415.3179ms.
+2025-03-15 14:54:47.188 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 14:54:47.193 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 13440.3181ms
+2025-03-15 14:54:47.194 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:54:47.196 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 200 in 13457.3195 ms
+2025-03-15 14:54:47.202 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 200 null application/json; charset=utf-8 13498.4338ms
+2025-03-15 14:55:46.614 +03:00 [INF] Application is shutting down...
+2025-03-15 14:56:06.469 +03:00 [WRN] Overriding address(es) 'http://localhost:5069'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-15 14:56:06.517 +03:00 [INF] Now listening on: http://localhost:5011
+2025-03-15 14:56:06.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 14:56:06.518 +03:00 [INF] Hosting environment: Development
+2025-03-15 14:56:06.518 +03:00 [INF] Content root path: /Users/gl.krutoimail.ru/RiderProjects/NeiroGen/NeiroGenApi
+2025-03-15 14:56:11.418 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 14:56:11.444 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-15 14:56:11.445 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:56:11.454 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 14:56:11.465 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 14:56:11.468 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 14:56:11.473 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:56:11.474 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 14:56:11.533 +03:00 [INF] Received HTTP response headers after 57.4926ms - 200
+2025-03-15 14:56:11.539 +03:00 [INF] End processing HTTP request after 66.7733ms - 200
+2025-03-15 14:56:11.551 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:56:11.552 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 14:56:11.559 +03:00 [INF] Received HTTP response headers after 7.647ms - 200
+2025-03-15 14:56:11.560 +03:00 [INF] End processing HTTP request after 8.6515ms - 200
+2025-03-15 14:56:11.560 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 14:56:11.568 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:56:11.568 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 14:56:12.131 +03:00 [INF] Received HTTP response headers after 562.4594ms - 200
+2025-03-15 14:56:12.132 +03:00 [INF] End processing HTTP request after 564.0355ms - 200
+2025-03-15 14:56:26.534 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:56:26.536 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 14:56:26.552 +03:00 [INF] Received HTTP response headers after 16.146ms - 200
+2025-03-15 14:56:26.552 +03:00 [INF] End processing HTTP request after 17.9903ms - 200
+2025-03-15 14:56:26.553 +03:00 [INF] Поздравление успешно отправлено в Proxy API: true
+2025-03-15 14:56:26.553 +03:00 [INF] текст Поздравления : Дорогой Friend 1,
+
+В этот особенный день, когда солнце светит ярче, а в воздухе витает атмосфера праздника, я хотел бы поздравить тебя от всего сердца! Твой путь к успеху и радости, как и твое увлечение Хобби, всегда восхищает меня. Твоя страсть, твое упорство и твой энтузиазм вдохновляют меня и окружающих.
+
+Сегодня я хочу тебе пожелать всего самого лучшего. Желаю тебе исполнения всех твоих желаний и梦 dreams. Пусть каждый твой день будет наполнен любовью, счастьем и успехом. Пусть жизнь преподносит тебе только те испытания, которые ты сможешь преодолеть и которые сделают тебя еще сильнее.
+
+Твое увлечение Хобби должно приносить тебе не только радость и удовлетворение, но и вдохновлять тебя на новые достижения. Пусть в этом году ты сможешь реализовать свои самые смелые идеи и мечты в этой сфере.
+
+Ты заслуживаешь только самого лучшего, Friend 1. И я уверен, что ты достигнешь всего, чего пожелаешь. Твоя энергия, оптимизм и упорство - вот те качества, которые помогут тебе преодолеть любые препятствия на пути к success.
+
+С днем рождения, Friend 1! Желаю тебе любви, счастья, удачи и, конечно же, всего того, что ты желаешь в этом мире. Спасибо за твою дружбу и за то, что вдохновляешь меня своими успехами и достижениями. Ты настоящий герой для меня.
+
+С любовью и теплом,
+[Ваше имя]
+2025-03-15 14:56:26.559 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15088.9332ms.
+2025-03-15 14:56:26.567 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 14:56:26.574 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 15116.3005ms
+2025-03-15 14:56:26.575 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 14:56:26.578 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 200 in 15133.5248 ms
+2025-03-15 14:56:26.584 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 200 null application/json; charset=utf-8 15166.7458ms

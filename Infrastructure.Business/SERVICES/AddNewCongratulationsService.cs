@@ -48,6 +48,7 @@ public class AddNewCongratulationsService : IAddNewCongratulationsService
             });
 
             _logger.Information("Поздравление успешно отправлено в Proxy API: {Result}", result);
+            _logger.Information("текст Поздравления : {congratulations}", congratulations);
             return result;
         }
         catch (Exception ex)

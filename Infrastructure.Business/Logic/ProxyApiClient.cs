@@ -15,7 +15,7 @@ public class ProxyApiClient: IProxyApiClient
     
     public async Task<bool> CongratilationToProxyApiAsync(PozdrStringDTO pozdrik)
     {
-        var response = await _httpClient.PostAsJsonAsync("api/neirogen/pozdrik/add", pozdrik._pozdrikId);
+        var response = await _httpClient.PostAsJsonAsync("api/neirogen/pozdrik/add", pozdrik);
         return response.IsSuccessStatusCode;
     }
 
