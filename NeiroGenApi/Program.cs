@@ -23,6 +23,8 @@ builder.Services.AddScoped<IAddNewCongratulationsService, AddNewCongratulationsS
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -40,6 +42,7 @@ app.UseSerilogRequestLogging();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapControllers();
 }
 
 app.UseHttpsRedirection();
