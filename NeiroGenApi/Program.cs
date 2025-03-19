@@ -3,8 +3,15 @@ using Domain.Services;
 using Domain.Services.IServices;
 using Infrastructure.Business.SERVICES;
 using Serilog;
+using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.EnableAnnotations();
+
+});
 
 var configuration = builder.Configuration;
 var apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
@@ -46,7 +53,6 @@ builder.Services.AddScoped<IAddNewCongratulationsService, AddNewCongratulationsS
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // Логирование через Serilog
 Log.Logger = new LoggerConfiguration()

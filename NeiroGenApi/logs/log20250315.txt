@@ -646,3 +646,46 @@ System.Exception: Error fetching Name: Not Found
 2025-03-15 14:56:26.575 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
 2025-03-15 14:56:26.578 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 200 in 15133.5248 ms
 2025-03-15 14:56:26.584 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 200 null application/json; charset=utf-8 15166.7458ms
+2025-03-15 15:04:57.554 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - null null
+2025-03-15 15:04:57.574 +03:00 [INF] Executing endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 15:04:57.575 +03:00 [INF] Route matched with {action = "GetIntAndPozh", controller = "ControllerApi"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetIntAndPozh(Int32) on controller NeiroGenApi.ControllerApi (NeiroGenApi).
+2025-03-15 15:04:57.579 +03:00 [INF] Executing action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) - Validation state: "Valid"
+2025-03-15 15:04:57.580 +03:00 [INF] Начинаем добавление нового поздравления для ID: 6
+2025-03-15 15:04:57.580 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 15:04:57.580 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/6
+2025-03-15 15:04:57.643 +03:00 [INF] Received HTTP response headers after 62.367ms - 200
+2025-03-15 15:04:57.644 +03:00 [INF] End processing HTTP request after 63.5407ms - 200
+2025-03-15 15:04:57.649 +03:00 [INF] Start processing HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 15:04:57.649 +03:00 [INF] Sending HTTP request GET http://localhost:5010/api/neirogen/pozdrik/name/6
+2025-03-15 15:04:57.663 +03:00 [INF] Received HTTP response headers after 14.4737ms - 200
+2025-03-15 15:04:57.664 +03:00 [INF] End processing HTTP request after 15.4552ms - 200
+2025-03-15 15:04:57.665 +03:00 [INF] Найдены интересы и пожелания для ID: 6
+2025-03-15 15:04:57.666 +03:00 [INF] Start processing HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 15:04:57.666 +03:00 [INF] Sending HTTP request POST https://openrouter.ai/api/v1/chat/completions
+2025-03-15 15:04:58.567 +03:00 [INF] Received HTTP response headers after 900.7303ms - 200
+2025-03-15 15:04:58.569 +03:00 [INF] End processing HTTP request after 902.7793ms - 200
+2025-03-15 15:05:10.754 +03:00 [INF] Start processing HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 15:05:10.754 +03:00 [INF] Sending HTTP request POST http://localhost:5010/api/neirogen/pozdrik/add
+2025-03-15 15:05:10.777 +03:00 [INF] Received HTTP response headers after 23.0199ms - 200
+2025-03-15 15:05:10.777 +03:00 [INF] End processing HTTP request after 23.7917ms - 200
+2025-03-15 15:05:10.777 +03:00 [INF] Поздравление успешно отправлено в Proxy API: true
+2025-03-15 15:05:10.777 +03:00 [INF] текст Поздравления : Дорогой Friend 1!
+
+В этот особенный день, когда мир озаряется ярче от твоего присутствия, я не могу не поделиться с тобой теплыми словами и искренними пожеланиями. Помню, как мы вместе погружались в мир твоего любимого хобби, и я с удивлением отмечал, как много энергии и вдохновения ты в него вкладываешь. Твой энтузиазм и страсть к любимому делу всегда заражают окружающих, в том числе и меня.
+
+Сегодня я хочу пожелать тебе, чтобы твое хобби приносило не только радость, но и бесценные моменты, которые ты будешь вспоминать с улыбкой и теплотой в сердце. Пусть каждый шаг на этом пути будет полон новых открытий и приятных сюрпризов, а каждое достижение наполняет твою душу небывалым восторгом.
+
+Тебе, мой дорогой друг, я желаю, чтобы все твои мечты и заветные желания непременно сбывались. Эта жизнь слишком коротка, чтобы останавливаться на полпути к своей лучшей версии. Будь смелым, открывай новые горизонты, и всегда помни: ты способен на большее, чем ты сам себе позволяешь.
+
+С днем рождения, Friend 1! Пусть каждый новый день дарит тебе новые возможности для самореализации, вдохновения и счастья. Будь душой компании, каким тебя знаем все мы, и продолжай радовать нас своим теплом и неповторимостью. С тобой жизнь становится ярче, живее и интереснее. Спасибо, что ты есть в моей жизни!
+2025-03-15 15:05:10.778 +03:00 [INF] Executed action method NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 13197.968ms.
+2025-03-15 15:05:10.783 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-15 15:05:10.784 +03:00 [INF] Executed action NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi) in 13208.0412ms
+2025-03-15 15:05:10.784 +03:00 [INF] Executed endpoint 'NeiroGenApi.ControllerApi.GetIntAndPozh (NeiroGenApi)'
+2025-03-15 15:05:10.784 +03:00 [INF] HTTP GET /api/GenerateCon/6 responded 200 in 13209.9203 ms
+2025-03-15 15:05:10.784 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/api/GenerateCon/6 - 200 null application/json; charset=utf-8 13230.1695ms
+2025-03-15 15:05:10.860 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5011/favicon.ico - null null
+2025-03-15 15:05:10.863 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0794 ms
+2025-03-15 15:05:10.864 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5011/favicon.ico - 404 0 null 3.9235ms
+2025-03-15 15:05:10.864 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5011/favicon.ico, Response status code: 404
+2025-03-15 15:13:57.992 +03:00 [INF] Application is shutting down...
