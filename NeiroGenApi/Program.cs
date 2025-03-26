@@ -16,16 +16,16 @@ builder.Services.AddSwaggerGen(c =>
 
 //          для обычного запуска
 
-// var configuration = builder.Configuration;
-// var apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
-// var dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
-// var apiUrl = configuration["ApiSettings:ApiUrl"] ?? throw new Exception("ApiUrl is missing");
+var configuration = builder.Configuration;
+var apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
+var dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
+var apiUrl = configuration["ApiSettings:ApiUrl"] ?? throw new Exception("ApiUrl is missing");
 
 
 //        для докера
-var apiKey = Environment.GetEnvironmentVariable("ApiKey") ?? throw new Exception("ApiKey is missing");
-var dbProxy = Environment.GetEnvironmentVariable("DbProxy") ?? throw new Exception("DbProxy is missing");
-var apiUrl = Environment.GetEnvironmentVariable("ApiUrl") ?? throw new Exception("ApiUrl is missing");
+// var apiKey = Environment.GetEnvironmentVariable("ApiKey") ?? throw new Exception("ApiKey is missing");
+// var dbProxy = Environment.GetEnvironmentVariable("DbProxy") ?? throw new Exception("DbProxy is missing");
+// var apiUrl = Environment.GetEnvironmentVariable("ApiUrl") ?? throw new Exception("ApiUrl is missing");
 
 
 // HttpClient для Proxy API (работает с `DbProxy`)

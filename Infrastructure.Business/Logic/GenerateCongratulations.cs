@@ -27,8 +27,8 @@ public class GenerateCongratulations:IGenerateCongratilation
 
         var requestBody = new
         {
-            model = "qwen/qwen2.5-vl-72b-instruct",
-            temperature = 0.9,  
+            model = "qwen/qwen2.5-vl-72b-instruct:free",
+            temperature = 0.8,  
             messages = new[]
             {
                 new { role = "system", content = "Ты профессиональный писатель поздравлений. Создавай уникальные и эмоциональные поздравления." },
