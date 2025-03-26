@@ -12,20 +12,28 @@ builder.Services.AddSwaggerGen(c =>
     c.EnableAnnotations();
 
 });
-
+string apiKey;
+string dbProxy;
+string apiUrl;
+    
 
 //          для обычного запуска
-
+if (builder.Environment.IsDevelopment())
+{
 var configuration = builder.Configuration;
-var apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
-var dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
-var apiUrl = configuration["ApiSettings:ApiUrl"] ?? throw new Exception("ApiUrl is missing");
+apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
+dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
+apiUrl = configuration["ApiSettings:ApiUrl"] ?? throw new Exception("ApiUrl is missing");
+}
+else
+{
+    //        для докера
+    apiKey = Environment.GetEnvironmentVariable("ApiKey") ?? throw new Exception("ApiKey is missing");
+    dbProxy = Environment.GetEnvironmentVariable("DbProxy") ?? throw new Exception("DbProxy is missing");
+    apiUrl = Environment.GetEnvironmentVariable("ApiUrl") ?? throw new Exception("ApiUrl is missing");
+}
 
 
-//        для докера
-// var apiKey = Environment.GetEnvironmentVariable("ApiKey") ?? throw new Exception("ApiKey is missing");
-// var dbProxy = Environment.GetEnvironmentVariable("DbProxy") ?? throw new Exception("DbProxy is missing");
-// var apiUrl = Environment.GetEnvironmentVariable("ApiUrl") ?? throw new Exception("ApiUrl is missing");
 
 
 // HttpClient для Proxy API (работает с `DbProxy`)
