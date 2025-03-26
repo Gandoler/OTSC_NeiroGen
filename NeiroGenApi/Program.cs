@@ -20,6 +20,10 @@ string apiUrl;
 //          для обычного запуска
 if (builder.Environment.IsDevelopment())
 {
+    builder.WebHost.ConfigureKestrel(options =>
+    {
+        options.ListenAnyIP(5013);  // Указываем порт 5000
+    });
 var configuration = builder.Configuration;
 apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
 dbProxy = configuration["ApiSettings:DbProxy"] ?? throw new Exception("DbProxy is missing");
