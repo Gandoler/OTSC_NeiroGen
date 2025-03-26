@@ -1,23 +1,29 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-USER $APP_UID
+﻿# Используем образ ASP.NET для выполнения
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 8084
 
+# Используем SDK для сборки
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["NeiroGenApi/NeiroGenApi.csproj", "NeiroGenApi/"]
-RUN dotnet restore "NeiroGenApi/NeiroGenApi.csproj"
-COPY . .
-WORKDIR "/src/NeiroGenApi"
-RUN dotnet build "NeiroGenApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "NeiroGenApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# Устанавливаем git и клонируем репозиторий
+RUN apt-get update && apt-get install -y git \
+    && git clone https://<Token>@github.com/Gandoler/OTSC_NeiroGen.git myrepo
 
+# Переходим в каталог с проектом
+WORKDIR /src/myrepo/NeiroGenApi
+
+# Восстанавливаем зависимости и собираем проект
+RUN dotnet restore NeiroGenApi.csproj
+RUN dotnet publish NeiroGenApi.csproj -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# Финальный образ с минимальным размером
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=build /app/publish .
+
+
+# Запускаем приложение
 ENTRYPOINT ["dotnet", "NeiroGenApi.dll"]
