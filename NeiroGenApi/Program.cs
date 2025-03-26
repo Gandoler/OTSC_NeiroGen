@@ -22,7 +22,7 @@ if (builder.Environment.IsDevelopment())
 {
     builder.WebHost.ConfigureKestrel(options =>
     {
-        options.ListenAnyIP(5013);  // Указываем порт 5000
+        options.ListenAnyIP(5013);  
     });
 var configuration = builder.Configuration;
 apiKey = configuration["ApiSettings:ApiKey"] ?? throw new Exception("ApiKey is missing");
