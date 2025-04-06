@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace NeiroGenApi;
 
 [ApiController]
-[Route("api/GenerateCon")]
+[Route("api/generateCon")]
 public class ControllerApi : ControllerBase
 {
     private readonly IAddNewCongratulationsService _addNewCongratulationsService;
